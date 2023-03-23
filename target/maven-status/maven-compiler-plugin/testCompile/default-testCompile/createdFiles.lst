@@ -1,0 +1,4 @@
+stepdefinitions\AmazonStepdefinition.class
+utilities\Driver.class
+pages\AmazonPage.class
+utilities\ConfigReader.class
