@@ -54,4 +54,35 @@ public class AmazonStepdefinition {
     @And("User tests whether the resutls contain Iphone")
     public void userTestsWhetherTheResutlsContainIphone() {
     }
+
+    @Then("User searches for {string}")
+    public void userSearchesFor(String searchedWord) {
+        amazonPage.searchBox.sendKeys(searchedWord,Keys.ENTER);
+    }
+
+    @And("User tests whether the resutls contain {string}")
+    public void userTestsWhetherTheResutlsContain(String searchedWorld) {
+        String actualSearchResult = amazonPage.searchResultWE.getText();
+        Assert.assertTrue(actualSearchResult.contains(searchedWorld));
+    }
+
+    @Given("User goes to {string} page")
+    public void userGoesToPage(String searchedUrl) {
+        Driver.getDriver().get(ConfigReader.getProperty(searchedUrl));
+    }
+
+    @Then("User tests that the URL contains {string}")
+    public void userTestsThatTheURLContains(String requestedUrl) {
+        String actualUrl = Driver.getDriver().getCurrentUrl();
+        Assert.assertTrue(actualUrl.contains(requestedUrl));
+    }
+
+    @Then("User waits {int} seconds")
+    public void userWaitsSeconds(int requestedTime) {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

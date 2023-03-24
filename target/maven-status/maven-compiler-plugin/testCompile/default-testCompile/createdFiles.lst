@@ -1,4 +1,11 @@
+stepdefinitions\ClassworkBRCStepdefinition.class
+pages\AmazonPage.class
+runners\Runner.class
 stepdefinitions\AmazonStepdefinition.class
 utilities\Driver.class
-pages\AmazonPage.class
+pages\EDTPage.class
+stepdefinitions\EditDataTableStepdefinition.class
+pages\BrcPage.class
+stepdefinitions\TrendyolStepdefinition.class
+stepdefinitions\BlueRentACarStepdefinition.class
 utilities\ConfigReader.class
