@@ -4,7 +4,7 @@
     Background: Common Steps
       Given User goes to Amazon page
 
-Scenario:  TC01 User searches with parameters on  Amazon
+  Scenario:  TC01 User searches with parameters on  Amazon
 
   Then User searches for "Nutella"
   And User tests whether the resutls contain "Nutella"
@@ -16,6 +16,7 @@ Scenario:  TC01 User searches with parameters on  Amazon
       And User tests whether the resutls contain "Selenium"
       And Closes the page
 
+      @grup4
     Scenario:  TC01 User searches with parameters on  Amazon
 
       Then User searches for "Java"

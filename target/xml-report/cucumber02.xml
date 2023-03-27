@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="23.797">
+    <testcase classname="US012 Usage Hooks&amp;Screenshot Class" name="TC01  Hooks&amp;Screenshot Usage" time="23.123">
+        <failure message="" type="java.lang.AssertionError">
+            <![CDATA[Given User enters the page "https://www.trendyol.com".......................passed
+Then User waits 3 seconds...................................................passed
+When User tests that the URL contains "amazon"..............................failed
+And Closes the page.........................................................skipped
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.AmazonStepdefinition.userTestsThatTheURLContains(AmazonStepdefinition.java:77)
+	at ✽.User tests that the URL contains "amazon"(file:///C:/Users/Lenovo/IdeaProjects/Cucumber_2023/src/test/resources/features/US013_Hooks&Screenshot&Trendyol.feature:7)
+]]>
+        </failure>
+    </testcase>
+</testsuite>
