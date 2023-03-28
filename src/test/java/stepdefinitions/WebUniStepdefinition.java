@@ -3,6 +3,7 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import pages.WebUniPage;
@@ -66,7 +67,6 @@ public class WebUniStepdefinition {
         String actualPopupText = Driver.getDriver().switchTo().alert().getText();
         String expectedPopupText = "validation failed";
         assertEquals(expectedPopupText,actualPopupText);
-
     }
 
     @And("Close the Popup by saying OK")
