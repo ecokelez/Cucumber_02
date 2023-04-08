@@ -21,7 +21,6 @@ public class EditDataTableStepdefinition {
     @Then("presses the New button")
     public void pressesTheNewButton() {
         edtPage.newButton.click();
-
     }
 
     @And("enters {string} in the Name section")
