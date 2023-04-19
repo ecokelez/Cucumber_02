@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         monochrome = true,
         features = "src/test/resources/features",
         glue = {"stepdefinitions","hooks"},
-        tags = "@failed_scenario",  // iki tag'i aynı anda calistirmak istersek => @gp1 or @gp2",
+        tags = "@excel_automation",  // iki tag'i aynı anda calistirmak istersek => @gp1 or @gp2",
         dryRun = false
 )
 public class Runner {

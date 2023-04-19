@@ -4,13 +4,13 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import pages.BrcPage;
+import pages.BrcHomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 public class ClassworkBRCStepdefinition {
 
-    BrcPage brcPage = new BrcPage();
+    BrcHomePage brcHomePage = new BrcHomePage();
     @Given("user goes to {string} homepage")
     public void userGoesToHomepage(String searchedUrl) {
         Driver.getDriver().get(ConfigReader.getProperty(searchedUrl));
@@ -18,28 +18,28 @@ public class ClassworkBRCStepdefinition {
 
     @Then("Clicks Log in")
     public void clicksLogIn() {
-        brcPage.brcHomePageLogin.click();
+        brcHomePage.brcHomePageLogin.click();
 
     }
 
     @And("enters the  invalid {string}")
     public void entersTheInvalid(String wrongEmail) {
-        brcPage.emailBox.sendKeys(wrongEmail);
+        brcHomePage.emailBox.sendKeys(wrongEmail);
     }
 
     @And("enters invalid {string}")
     public void entersInvalid(String wrongPassword) {
-        brcPage.passwordBox.sendKeys(wrongPassword);
+        brcHomePage.passwordBox.sendKeys(wrongPassword);
     }
 
     @And("Presses on the Login button")
     public void pressesOnTheLoginButton() {
-        brcPage.loginButton.click();
+        brcHomePage.loginButton.click();
     }
 
     @Then("checks that the page cannot be accessed")
     public void checksThatThePageCannotBeAccessed() {
-        Assert.assertTrue(brcPage.loginFailed.isDisplayed());
+        Assert.assertTrue(brcHomePage.loginFailed.isDisplayed());
     }
 
     @And("user waits {int} seconds")

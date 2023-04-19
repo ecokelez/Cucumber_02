@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class BrcPage {
+public class BrcHomePage {
 
-    public BrcPage(){
+    public BrcHomePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -19,9 +19,6 @@ public class BrcPage {
 
     @FindBy (xpath = "//*[@id='formBasicPassword']")
     public WebElement passwordBox;
-
-    @FindBy (xpath = "//*[@class='btn btn-primary']")
-    public WebElement loginButton;
 
     @FindBy (xpath = "//*[@class='btn btn-primary']")
     public WebElement loginFailed;

@@ -1,14 +1,14 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.*;
-import pages.BrcPage;
+import pages.BrcHomePage;
 
 import java.util.List;
 import java.util.Map;
 
 public class BRCLoginStepdefinition {
 
-    BrcPage brcPage = new BrcPage();
+    BrcHomePage brcHomePage = new BrcHomePage();
     @Then("User enters email and password")
     public void user_enters_email_and_password(io.cucumber.datatable.DataTable dataTable) {
         // 1- We can store the data using  List<String>
@@ -22,9 +22,9 @@ public class BRCLoginStepdefinition {
       List<Map<String,String>> adminInfo = dataTable.asMaps(String.class, String.class);
         System.out.println(adminInfo);
         for (Map<String,String> admin: adminInfo) {
-            brcPage.emailBox.sendKeys(admin.get("email"));
-            brcPage.passwordBox.sendKeys(admin.get("password"));
-            brcPage.loginButton.click();
+            brcHomePage.emailBox.sendKeys(admin.get("email"));
+            brcHomePage.passwordBox.sendKeys(admin.get("password"));
+            brcHomePage.loginButton.click();
         }
 
 

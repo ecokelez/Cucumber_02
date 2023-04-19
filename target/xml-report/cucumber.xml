@@ -1,36 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="29.782">
-    <testcase classname="US002 Parameter Usage with failed_scenario" name="TC01 User searches with parameters on  Amazon" time="16.093">
-        <failure message="" type="java.lang.AssertionError">
-            <![CDATA[Given User goes to Amazon page..............................................passed
-Then User searches for "Nutella"............................................passed
-And User tests whether the resutls contain "Tadella"........................failed
-And Closes the page.........................................................skipped
-
-StackTrace:
-java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at stepdefinitions.AmazonStepdefinition.userTestsWhetherTheResutlsContain(AmazonStepdefinition.java:66)
-	at ✽.User tests whether the resutls contain "Tadella"(file:///C:/Users/Lenovo/IdeaProjects/Cucumber_2023/src/test/resources/features/US017_failed_Scenarios.feature:10)
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="US002 Parameter Usage with failed_scenario" name="TC02 User searches with parameters on  Amazon" time="12.922">
-        <failure message="" type="java.lang.AssertionError">
-            <![CDATA[Given User goes to Amazon page..............................................passed
-Then User searches for "Tofaş"..............................................passed
-And User tests whether the resutls contain "Toros"..........................failed
-And Closes the page.........................................................skipped
-
-StackTrace:
-java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at stepdefinitions.AmazonStepdefinition.userTestsWhetherTheResutlsContain(AmazonStepdefinition.java:66)
-	at ✽.User tests whether the resutls contain "Toros"(file:///C:/Users/Lenovo/IdeaProjects/Cucumber_2023/src/test/resources/features/US017_failed_Scenarios.feature:16)
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.867">
+    <testcase classname="excel_login_feature" name="TC01_admin_enter_test" time="0.176">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given User enters in with "customer_info" information.......................undefined
 ]]>
         </failure>
     </testcase>
