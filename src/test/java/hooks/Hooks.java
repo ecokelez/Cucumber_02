@@ -1,20 +1,30 @@
-package stepdefinitions;
+package hooks;
 
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
 
 public class Hooks {
+
+    @Before
+    public void setUpScenarios(){
+        System.out.println("Before Method");
+    }
     @After
     public void tearDown(Scenario scenario) {
-        final byte[] screenshot=((TakesScreenshot)
-                Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+        System.out.println();
+
         if (scenario.isFailed()) {
-            scenario.attach(screenshot, "image/png","screenshots");
+            final byte[] failedScreenshot=((TakesScreenshot)
+                    Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+                               // screenshot          // file               // name of screenshot
+            scenario.attach(failedScreenshot,"image/png","failed_scenario" + scenario.getName());
+            Driver.closeDriver();
         }
-        Driver.closeDriver();
+
 
         //Scenario Class'indan scenario degiskeni olusturup,TakesScreenshot' a atariz
         //getScreenshotAs methduyla scenario.isFailed olursa

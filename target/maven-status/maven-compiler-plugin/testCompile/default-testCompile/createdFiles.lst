@@ -18,5 +18,7 @@ stepdefinitions\AutoPracStepdefinition.class
 utilities\Driver.class
 stepdefinitions\EditDataTableStepdefinition.class
 pages\WebUniPage.class
+pages\SchoolsPage.class
+stepdefinitions\SchoolManagStepdefinition.class
 utilities\ConfigReader.class
 pages\HerOkuAppPage.class

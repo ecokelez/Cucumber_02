@@ -13,9 +13,10 @@ import org.junit.runner.RunWith;
         //=> Sadece Runnner Class'ından calistirdigimizda (plugin=..) bu raporu alabilriz ve
         //==> target altinda cucumber-reports icinde raporlarimizi gorebilirz
 
+        monochrome = true,
         features = "src/test/resources/features",
-        glue = "stepdefinitions",
-        tags = "@grup5",  // iki tag'i aynı anda calistirmak istersek => @gp1 or @gp2",
+        glue = {"stepdefinitions","hooks"},
+        tags = "@failed_scenario",  // iki tag'i aynı anda calistirmak istersek => @gp1 or @gp2",
         dryRun = false
 )
 public class Runner {

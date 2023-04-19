@@ -1,4 +1,5 @@
 C:\Users\Lenovo\IdeaProjects\Cucumber_2023\src\test\java\stepdefinitions\TrendyolStepdefinition.java
+C:\Users\Lenovo\IdeaProjects\Cucumber_2023\src\test\java\pages\SchoolsPage.java
 C:\Users\Lenovo\IdeaProjects\Cucumber_2023\src\test\java\pages\BrcPage.java
 C:\Users\Lenovo\IdeaProjects\Cucumber_2023\src\test\java\utilities\ConfigReader.java
 C:\Users\Lenovo\IdeaProjects\Cucumber_2023\src\test\java\runners\TestRunner01.java
@@ -12,6 +13,7 @@ C:\Users\Lenovo\IdeaProjects\Cucumber_2023\src\test\java\pages\HerOkuAppPage.jav
 C:\Users\Lenovo\IdeaProjects\Cucumber_2023\src\test\java\runners\TestRunner02.java
 C:\Users\Lenovo\IdeaProjects\Cucumber_2023\src\test\java\stepdefinitions\WebUniStepdefinition.java
 C:\Users\Lenovo\IdeaProjects\Cucumber_2023\src\test\java\stepdefinitions\BlueRentACarStepdefinition.java
+C:\Users\Lenovo\IdeaProjects\Cucumber_2023\src\test\java\stepdefinitions\SchoolManagStepdefinition.java
 C:\Users\Lenovo\IdeaProjects\Cucumber_2023\src\test\java\pages\EDTPage.java
 C:\Users\Lenovo\IdeaProjects\Cucumber_2023\src\test\java\stepdefinitions\AmazonStepdefinition.java
 C:\Users\Lenovo\IdeaProjects\Cucumber_2023\src\test\java\stepdefinitions\GuruStepdefinition.java
