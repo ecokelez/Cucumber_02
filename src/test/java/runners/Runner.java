@@ -7,16 +7,19 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin={"html:target\\cucumber-reports.html",
+        plugin={"pretty", // for reports more readeble
+                "html:target\\cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
-                "junit:target/xml-report/cucumber.xml"},
+                "junit:target/xml-report/cucumber.xml",
+                "rerun:target/failed_scenarios.txt"
+        },
         //=> Sadece Runnner Class'ından calistirdigimizda (plugin=..) bu raporu alabilriz ve
         //==> target altinda cucumber-reports icinde raporlarimizi gorebilirz
 
-        monochrome = true,
+        monochrome = true, // for reports more readeble on the console
         features = "src/test/resources/features",
         glue = {"stepdefinitions","hooks"},
-        tags = "@excel_automation",  // iki tag'i aynı anda calistirmak istersek => @gp1 or @gp2",
+        tags = "@failed_scenario",  // iki tag'i aynı anda calistirmak istersek => @gp1 or @gp2",
         dryRun = false
 )
 public class Runner {

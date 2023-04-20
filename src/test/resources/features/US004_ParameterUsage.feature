@@ -1,5 +1,6 @@
 Feature: US004 Parametre Kullanimi
 
+    @testrunner
 Scenario: TC01 Parameter Usage
     Given User enters the page "https://www.trendyol.com"
     Then User waits 3 seconds

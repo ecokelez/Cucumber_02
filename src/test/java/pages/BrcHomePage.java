@@ -10,10 +10,19 @@ public class BrcHomePage {
     public BrcHomePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-
     @FindBy (xpath = "//*[@class='btn btn-primary btn-sm']")
     public WebElement brcHomePageLogin;
 
+    @FindBy (id = "dropdown-basic-button")
+    public WebElement userId;
+
+    @FindBy (xpath = "//a[text()='Logout']")
+    public WebElement logOutLink;
+
+    @FindBy (xpath = "//button[contains(text(),'OK')]")
+    public WebElement okButton;
+
+    /*
     @FindBy (xpath = "//*[@id='formBasicEmail']")
     public WebElement emailBox;
 
@@ -22,4 +31,8 @@ public class BrcHomePage {
 
     @FindBy (xpath = "//*[@class='btn btn-primary']")
     public WebElement loginFailed;
+    @FindBy(xpath = "//*[@class='btn btn-primary']")
+    public WebElement loginButton;
+
+     */
 }

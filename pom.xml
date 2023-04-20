@@ -60,8 +60,9 @@
             <artifactId>cucumber-java</artifactId>
             <version>7.2.3</version>
         </dependency>
-
     </dependencies>
+
+    <!--- Plugins -->
 
     <build>
         <plugins>
@@ -73,9 +74,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <skipTests>false</skipTests>
                     <includes>
-                        <include>**/runners/</include>
-                        <!--runners/ dan sonraki  *TestRun*.java   kısmını sildim, birden fazla browser ile calıs.
-                       ve ilk olarak baska Url e gidiyor   !-->
+                        <include>**/runners/*TestRunner*.java</include>
                     </includes>
                 </configuration>
             </plugin>
@@ -95,16 +94,13 @@
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                     <useFile>false</useFile>
                     <includes>
-                        <include>**/runners/</include>
-                        <!--runners/ dan sonraki  *TestRun*.java   kısmını sildim, birden fazla browser ile calıs.
-                        ve ilk olarak baska Url e gidiyor   !-->
-
+                        <include>**/runners/*TestRunner*.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
 
-            <!--
+
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -117,25 +113,21 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>cucumber-jvm-example</projectName>
+                            <projectName>cucumber-framework</projectName>
                             <outputDirectory>${project.build.directory}</outputDirectory>
                             <inputDirectory>${project.build.directory}</inputDirectory>
                             <jsonFiles>
                                 <param>**/json-reports/*.json</param>
-                            </jsonFiles><classificationFiles>->
-                            <param>sample.properties</param>
-                            <param>other.properties</param>
-                        </classificationFiles>
+                            </jsonFiles>
+                            <classificationFiles>->
+                                <param>sample.properties</param>
+                                <param>other.properties</param>
+                            </classificationFiles>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-            -->
-            <!-- ==>Test Classlarda hata adligimiz icin gecici olarak devre disi biraktik-->
-
-
 
         </plugins>
     </build>
-
 </project>

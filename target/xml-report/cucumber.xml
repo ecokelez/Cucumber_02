@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.867">
-    <testcase classname="excel_login_feature" name="TC01_admin_enter_test" time="0.176">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given User enters in with "customer_info" information.......................undefined
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="17.908">
+    <testcase classname="US004 Parametre Kullanimi" name="TC01 Parameter Usage" time="17.084">
+        <system-out>
+            <![CDATA[Given User enters the page "https://www.trendyol.com".......................passed
+Then User waits 3 seconds...................................................passed
+When User tests that the URL contains "trend"...............................passed
+And Closes the page.........................................................passed
 ]]>
-        </failure>
+        </system-out>
+    </testcase>
+</testsuite>
+ase>
+    <testcase classname="US002 Parameter Usage" name="TC02 User searches with parameters on  Amazon" time="16.182">
+        <system-out>
+            <![CDATA[Given User goes to Amazon page..............................................passed
+Then User searches for "Selenium"...........................................passed
+And User tests whether the resutls contain "Selenium".......................passed
+And Closes the page.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US002 Parameter Usage" name="TC01 User searches with parameters on  Amazon" time="17.722">
+        <system-out>
+            <![CDATA[Given User goes to Amazon page..............................................passed
+Then User searches for "SQL"................................................passed
+And User tests whether the resutls contain "SQL"............................passed
+And Closes the page.........................................................passed
+]]>
+        </system-out>
     </testcase>
 </testsuite>

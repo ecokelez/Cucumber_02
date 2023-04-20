@@ -5,12 +5,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.BrcHomePage;
+import pages.BrcLoginPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 public class BlueRentACarStepdefinition {
 
     BrcHomePage brcHomePage = new BrcHomePage();
+    BrcLoginPage brcLoginPage = new BrcLoginPage();
     @Given("User on the {string} homepage")
     public void userOnTheHomepage(String searchedUrl) {
         Driver.getDriver().get(ConfigReader.getProperty(searchedUrl));
@@ -23,22 +25,22 @@ public class BlueRentACarStepdefinition {
 
     @And("Enters invalid username")
     public void entersInvalidUsername() {
-        brcHomePage.emailBox.sendKeys(ConfigReader.getProperty("brcWrongEmail"));
+        brcLoginPage.emailBox.sendKeys(ConfigReader.getProperty("brcWrongEmail"));
     }
 
     @And("Enters invalid password")
     public void entersInvalidPassword() {
-        brcHomePage.passwordBox.sendKeys(ConfigReader.getProperty("brcWrongPassword"));
+        brcLoginPage.passwordBox.sendKeys(ConfigReader.getProperty("brcWrongPassword"));
     }
 
     @And("Presses the Login button")
     public void pressesTheLoginButton() {
-        brcHomePage.loginButton.click();
+        brcLoginPage.loginButton.click();
     }
 
     @Then("Checks that the page cannot be accessed")
     public void checksThatThePageCannotBeAccessed() {
-        Assert.assertTrue(brcHomePage.loginFailed.isDisplayed());
+        Assert.assertTrue(brcLoginPage.loginFailed.isDisplayed());
     }
 
     @And("The user closes the page")
