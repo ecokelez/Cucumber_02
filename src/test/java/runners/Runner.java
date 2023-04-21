@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
                 "html:target\\cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
-                "rerun:target/failed_scenarios.txt"
+                "rerun:target/failed_scenarios.txt",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
         //=> Sadece Runnner Class'ından calistirdigimizda (plugin=..) bu raporu alabilriz ve
         //==> target altinda cucumber-reports icinde raporlarimizi gorebilirz

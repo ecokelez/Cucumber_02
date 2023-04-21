@@ -13,5 +13,6 @@ Feature: US002 Parameter Usage with failed_scenario
   Scenario:  TC02 User searches with parameters on  Amazon
 
     Then User searches for "Güllaç"
-    And User tests whether the resutls contain "Güllaç"
+    And User tests whether the resutls contain "Baklava"
+    Then User takes a screenshot
     And Closes the page

@@ -8,7 +8,9 @@ import org.openqa.selenium.Keys;
 import pages.AmazonPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
+import java.io.IOException;
 
 
 public class AmazonStepdefinition {
@@ -85,4 +87,14 @@ public class AmazonStepdefinition {
             throw new RuntimeException(e);
         }
     }
+
+    @Then("User takes a screenshot")
+    public void user_takes_a_screenshot() {
+        try {
+            ReusableMethods.getScreenshot("screenshot");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
