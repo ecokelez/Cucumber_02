@@ -15,9 +15,9 @@ import org.junit.runner.RunWith;
         //==> target altinda cucumber-reports icinde raporlarimizi gorebilirz
 
         monochrome = true, // for reports more readeble on the console
-        features = "src/test/resources/features",
+        features = "src/test/resources/GridFeatures",
         glue = {"stepdefinitions"},
-        tags = "@testrunner",
+        tags = "@Grid",
         dryRun = false
 )
 public class TestRunner {
